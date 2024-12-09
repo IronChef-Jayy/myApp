@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap w/ Vite</title>
+    <script type="module" src="./js/main.js"></script>
+  </head>
+  <body>
+    <div class="container py-4 px-3 mx-auto">
+      <h1>Hello, Bootstrap and Vite!</h1>
+
+        <div id="app">
+            <!-- Navigation Bar -->
+            <nav>
+            <h1>SimpleNote</h1>
+            <button id="add-note-btn" class="btn btn-success">Add Note</button>
+            </nav>
+
+            <!-- Main Area -->
+            <main>
+            <div id="filter">
+                <label for="category-filter">Filter by Category:</label>
+                <select id="category-filter">
+                <option value="all">All</option>
+                <option value="general">General</option>
+                <option value="work">Work</option>
+                <option value="personal">Personal</option>
+                </select>
+            </div>
+            <div id="notes-list"></div>
+            </main>
+
+            <!-- Modals -->
+            <div id="note-modal" class="modal hidden">
+                <div class="modal-content">
+                    <h2 id="modal-title">Add Note</h2>
+                    <form id="note-form">
+                    <label for="note-title">Title</label>
+                    <input type="text" id="note-title">
+                    <label for="note-content">Content</label>
+                    <textarea id="note-content"></textarea>
+                    <label for="note-category">Category</label>
+                    <select id="note-category">
+                        <option value="General">General</option>
+                        <option value="Work">Work</option>
+                        <option value="Personal">Personal</option>
+                    </select>
+                    <button type="submit">Save</button>
+                    </form>
+                    <button id="close-modal">Close</button>
+                </div>
+            </div>
+
+            
+
+            <div id="view-modal" class="modal hidden">
+            <div class="modal-content">
+                <h2 id="view-title"></h2>
+                <p id="view-content"></p>
+                <p><strong>Category:</strong> <span id="view-category"></span></p>
+                <button id="edit-note-btn">Edit</button>
+                <button id="back-btn">Back</button>
+            </div>
+            </div>
+        </div>
+  <script src="./js/main.js" type="module"></script>
+</body>
+</html>
